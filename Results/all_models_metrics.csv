@@ -1,0 +1,25 @@
+Model,Task,Features,Best_Param,CV_Score,Val_Acc,Val_F1,Train_Time
+DT,Binary,Raw,"{'class_weight': None, 'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 10}",0.9871,0.9875,0.9874,0.02
+DT,Binary,Reduced,"{'class_weight': None, 'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 5}",0.9942,0.9938,0.9938,0.04
+DT,Multiclass,Raw,"{'class_weight': None, 'criterion': 'entropy', 'max_depth': 12, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 20}",0.7617,0.7538,0.7402,0.02
+DT,Multiclass,Reduced,"{'class_weight': None, 'criterion': 'gini', 'max_depth': 12, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 5}",0.7433,0.7475,0.7452,0.04
+RF,Binary,Raw,"{'max_depth': 12, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 50}",0.9928,0.9938,0.9937,0.09
+RF,Binary,Reduced,"{'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 50}",0.9984,0.9988,0.9987,0.09
+RF,Multiclass,Raw,"{'max_depth': 12, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 300}",0.8572,0.85,0.8485,0.8
+RF,Multiclass,Reduced,"{'max_depth': 12, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 300}",0.8258,0.8113,0.8098,0.8
+KNN,Binary,Raw,"{'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}",0.9949,0.9988,0.9987,0.0
+KNN,Binary,Reduced,"{'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}",0.9944,0.9975,0.9975,0.0
+KNN,Multiclass,Raw,"{'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}",0.9892,0.99,0.99,0.0
+KNN,Multiclass,Reduced,"{'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}",0.9444,0.9637,0.9638,0.0
+SVM,Binary,Raw,"{'C': 10, 'class_weight': 'balanced', 'gamma': 'scale', 'kernel': 'rbf'}",0.9978,0.9988,0.9987,0.02
+SVM,Binary,Reduced,"{'C': 1, 'class_weight': None, 'gamma': 1.0, 'kernel': 'rbf'}",0.9991,1.0,1.0,0.03
+SVM,Multiclass,Raw,"{'C': 10, 'class_weight': None, 'gamma': 'scale', 'kernel': 'rbf'}",0.9535,0.97,0.97,0.1
+SVM,Multiclass,Reduced,"{'C': 10, 'class_weight': None, 'gamma': 1.0, 'kernel': 'rbf'}",0.8444,0.8462,0.8446,0.11
+NB,Binary,Raw,{'var_smoothing': 0.01},0.9706,0.9663,0.9666,0.01
+NB,Binary,Reduced,{'var_smoothing': 0.01},0.9918,0.9925,0.9925,0.01
+NB,Multiclass,Raw,{'var_smoothing': 1e-09},0.7149,0.6913,0.6845,0.01
+NB,Multiclass,Reduced,{'var_smoothing': 1e-09},0.6603,0.6587,0.6404,0.01
+ANN,Binary,Raw,"{'net__batch_size': 32, 'net__module__activation': 'relu', 'net__module__hidden_sizes': (50,), 'net__optimizer__lr': 0.01, 'net__optimizer__weight_decay': 1e-05}",0.9986,0.9988,0.9987,9.82
+ANN,Multiclass,Raw,"{'net__batch_size': 128, 'net__module__activation': 'relu', 'net__module__hidden_sizes': (100, 50), 'net__optimizer__lr': 0.01, 'net__optimizer__weight_decay': 0.0001}",0.954,0.97,0.9701,3.76
+ANN,Binary,Reduced,"{'net__batch_size': 32, 'net__module__activation': 'relu', 'net__module__hidden_sizes': (100, 50), 'net__optimizer__lr': 0.01, 'net__optimizer__weight_decay': 0.0001}",0.9981,0.9988,0.9988,11.07
+ANN,Multiclass,Reduced,"{'net__batch_size': 64, 'net__module__activation': 'relu', 'net__module__hidden_sizes': (100, 50), 'net__optimizer__lr': 0.01, 'net__optimizer__weight_decay': 1e-05}",0.8697,0.8875,0.8877,6.06

@@ -1,0 +1,16 @@
+.claude/
+.claude
+build_cv_plot_notebooks.py
+build_new_notebooks.py
+View Submission_Gradescope.pdf
+
+.idea/
+
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+.DS_Store
+Thumbs.db
